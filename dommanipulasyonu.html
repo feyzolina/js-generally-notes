@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 400px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: red;
+        }
+
+        .yazi {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .renk {
+            background-color: burlywood;
+        }
+
+        .stil {
+            font-style: italic;
+            text-transform: uppercase;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <p class="yazi renk">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga alias animi aperiam nemo
+            reiciendis aliquid
+            veritatis ducimus at neque officia maiores rerum, tempora magnam sit qui exercitationem quam. Corporis, id?
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, a!</p>
+    </div>
+    <h2>başlık</h2>
+    <button onclick="ekle()">Renk değiştir</button>
+    <!-- //onclick="renkDegistir()" -->
+    <script>
+
+
+        // console.log(document.getElementById("container"));
+        // console.log(document.getElementsByClassName("yazi").item(0));
+        // console.log(document.getElementsByTagName("p").item(0));
+        // // document.getElementById("container").innerText = "merhaba havalar nasıl";
+        // document.getElementById("container").innerHTML += "merhaba havalar nasıl <h2>başlık</h2> ";  //  +atama yapmak yeni değere ilave yapmaktır. olanı tamamen değiştirmek istiyorsak sadece = yaparız
+        // document.getElementsByClassName("yazi").item(0).style.color = "blue";
+        // // document.getElementsByTagName("p").item(0).className = renk;
+        // document.getElementsByTagName("p").item(0).className += " stil";   //stil yazarken boşluk bırakmayı unutma!!!!(className i kullanırken1!!!) çünkü içine ulaşıp bir şey ilave ediyoruz. birleştiriyor. birleşince de ayrı şeyler gibi olmuyor
+        // document.getElementsByTagName("p").item(0).classList[1]="stil"
+        function renkDegistir() {
+            document.getElementsByTagName("p").item(1).style.color = "violet";
+            document.getElementsByTagName("p").item(1).style.backgroundColor = "yellow";
+            document.getElementsByTagName("p").item(1).style.fontSize = "40px"
+        }
+
+        function ekle() {
+            var yazi = document.getElementsByTagName("p").item(1).innerText;
+            document.getElementsByTagName("h2").item(0).innerText = yazi;
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

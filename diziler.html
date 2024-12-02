@@ -1,0 +1,88 @@
+<!-- // c#ta verinin türü vardır. sadece tek bir değişken üzerinden dizi tanımlanır. ama js de bir dizide hem string hem integer
+türünde veri saklayabilirim 
+
+js de bütün diziler dinamiktir, ekleme çıkarma yapabilirsin ama c# öyle mi-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var isimler = ["feyza", "cihan", "herkül"];
+        console.log(isimler);
+        console.log(isimler[2]);
+        console.log(isimler.join());  //dizinin ardına çağrılır, diziyi string bir değişken metot şeklinde yazar.
+
+
+        var sayilar = Array(3);   //elemanlarım belli değil, daha sonra atayacağım
+        sayilar[0] = 25; // sayı atadım.
+        sayilar[1] = 35;
+        console.log(sayilar[2]);   //2yi atamadım bu yüzden onu çağırdığımda undefined döner
+        console.log(sayilar); // yaparsam 2. indis empty yani boş döner
+
+        isimler[0] = 100;   //isimler dizisinin 0 indisli elemanını 100 yaptım
+        console.log(isimler);   // yeniden çağırdım. ve 0. indis 100 oldu. ancak bu var ile yapıldığı için böyle oldu. const ile olsaydı???
+
+        const urunler = ["masa", "tv", "sehpa"];
+        console.log(urunler);
+        urunler[0] = "mutfak masası";   //değiştirmek istedim
+        console.log(urunler);    ///burada nedense hata vermedi. ARAŞTIR!! CONSTLA DİZİ TANIMLADIĞINDA DİZİ İÇERİĞİ DEĞİŞTİRİLEBİLİR Mİ??
+
+        // const sayi1=10;
+        // sayi1=20;
+        // console.log(sayi1);  // değişken olarak yapınca hata verdi. DİZİ OLARAK YAPINCA NEDEN HATA VERMEDİ??
+
+
+        //DİZİNİN ELEMANI BİR FONKSİYON, OBJECT OLABİLİR!!!!
+        var masa = { renk: "kırmızı", fiyat: 10000, uzunluk: "2m" };
+        console.log(masa.renk);
+
+        var urunlerlistesi = [{ ad: "masa", renk: "kırmızı", fiyat: 10000 },
+        { ad: "koltuk", renk: "yeşil", fiyat: 20000 },
+        { ad: "sehpa", renk: "sarı", fiyat: 5000 }];   //3 objectli bir dizi oldu
+        console.log(urunlerlistesi[0].ad);
+
+        // var kullanici=prompt("Adınız:");
+        // console.log(kullanici);
+
+        // var renkler = Array(prompt("renkler listesi kaç elemanlı olsun?"));
+        // renkler[0] = prompt("1.rengi yazınız:");
+        // renkler[1] = prompt("2.rengi yazınız:");
+        // console.log(renkler);
+
+        var araclar=["BMW", "OPEL", "FORD", "HYUNDAİ"];
+        console.log(araclar.length);    //sadece string ve dizilerde çalışır, parametre istemez.
+        araclar[4]="TOYOTA";   //böyle de ekleme yapabilirsin. uzunluğunu bilmek zorundasın. son sıradan eleman eklenir
+        console.log(araclar);
+        araclar.push("MERCEDES");   //böyle de ekleme yapabilirsin. burada uzunluğunu bilmek zorunda değilsin. son sıradan eleman eklenir.
+        console.log(araclar);
+        araclar.pop();   //parametre istemez. en son sıradan eleman siler
+        console.log(araclar);
+        console.log(araclar.reverse());   //tersten yazar
+        console.log(araclar.sort());    //alfabetik sıralar
+        var number=[8,12,7,4,5,6];
+        console.log(number.sort());   //küçükten büyüğe değil. sayıları stringe çevirir, string üzerinden sıralar. 12yi en küçük görür burada
+
+        araclar.sort();
+        araclar.reverse();
+        console.log(araclar);    //zden a'ya bir dizilim için önce sort yapıp adan zye sıraladık. sonra ters çevirdik.
+
+        var araclar2=araclar.slice(0,3);    //araclar dizisinin şununcu elemanından itibaren al ve yeni bir dizi oluştur adı araclar2 olsun //0dan itibaren 3 tane al demek
+        console.log(araclar2);
+
+         var araclar2 = araclar.slice(2);   //2den itibaren kalanın hepsi 
+         console.log(araclar2);
+
+         console.log(araclar.concat(araclar2));    //iki diziyi birleştirdik.
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

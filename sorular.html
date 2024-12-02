@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //soru1:kullanıcıdan alınan değer kadar ekrana bize verdiği adını yazdırın
+        // var dongusayisi = prompt("isminizi kaç kere yazalım?");
+        // var ad = prompt("isminiz nedir?");
+        // var i = 1;
+        // while (i <= dongusayisi) {
+        //     console.log(ad);
+        //     i++
+        // }
+        // for (var i = 1; i <= dongusayisi; i++) {
+        //     console.log(ad);
+        // }
+
+
+
+        // //1.sayı 2. sayıdan büyük ise ve aynı zamanda sayılar 80den büyük ise çıkarma değilse toplama
+        // var sayi1 = 60;
+        // var sayi2 = 100;
+        // if (sayi1 > sayi2 && sayi1 > 80 && sayi2 > 80) {
+        //     console.log(sayi1 - sayi2);
+        // } else {
+        //     console.log(sayi1 + sayi2);
+        // }
+
+
+
+
+        //and yerine or kullanalım
+        // var sayi1 = 60;
+        // var sayi2 = 100;
+        // if (sayi1 > sayi2 || sayi1 > 80 || sayi2 > 80) {
+        //     console.log(sayi1 - sayi2);
+        // } else {
+        //     console.log(sayi1 + sayi2);
+        // }
+
+
+
+        //sayi1deki alinin notu 20den küçük ise ekrana kaldı, 50den küçük ise ekrana bütünleme, 50 ve 50den büyük ise ekrana geçti yazdır
+        // var sayi1 = 60;
+        // if(sayi1<20){
+        //     console.log("kaldı");
+        // }else if(sayi1<50){
+        //      console.log("bütünleme");
+        // }else if(sayi1>100){
+        //     console.log("büyük bu sayı")
+        // }else{
+        //      console.log("geçti");
+        // }
+
+
+
+
+        //kullanıcıdan alınan gün sayısına göre günün adını yazdır
+        // var gun = prompt("haftanın kaçıncı günündeyiz?");
+        // if (gun == 1) {
+        //     console.log("pazartesi");
+        // } else if (gun == 2) {
+        //     console.log("salı");
+        // }
+        // else if (gun == 3) {
+        //     console.log("çarşamba");
+        // }
+        // else {
+        //     console.log("biz sadece 3 gün çalışıyruz")
+        // }
+
+
+
+
+
+        //soru: kullanıcının klavyeden girdiği sayıları kullanıcı 5 sayısını girene kadar dizi halinde değişkene atan uygulama
+        var dizi1 = Array();   //elemanı belli olmayan diziler Array ile tnaımlanır.
+        // var dizi1 = Array(3);  //eleman sayısı belli ama eleman içeriği belli değil  
+        var i = 0;
+        while (true) {
+            var alinandeger = prompt("sayi");
+            if (alinandeger == 5) {
+                break;
+            } else {
+                dizi1[i] = alinandeger;
+                i++;
+            }
+            // dizi1[i]=prompt("sayı giriniz");
+
+        }
+        console.log(dizi1);   ///5i diziye eleman olarak atmaz
+
+        ///////////////////////////////farklı bir çözüm yolu:
+
+        var kullanici;
+        var dizi2 = Array();
+        var i = 0;
+        // while(kullanici!=5){
+        //     kullanici=prompt("sayı");
+        //     dizi2[i]=kullanici;
+        //     i++;
+        // }
+        // console.log(dizi2);   //5i diziye eleman olarak atar
+
+
+
+
+        ////////// başka bir yöntem:
+        while (kullanici != 5) {
+            kullanici = prompt("sayı");
+            if (kullanici = 5) {
+                dizi2[i] = kullanici;
+                i++;
+            }
+        }
+        console.log(dizi2);    //5i diziye almaz
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

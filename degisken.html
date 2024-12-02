@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var sayi1 = 20;
+        var sayi2 = 30;
+        var sonuc;
+        sonuc = sayi1 + sayi2;
+        console.log(sonuc);
+        sonuc = sayi1 - sayi2;
+        console.log(sonuc);
+        sonuc = sayi1 * sayi2;
+        console.log(sonuc);
+        sonuc = sayi1 / sayi2;
+        console.log(sonuc);
+        sonuc = sayi1 ^ 2;
+        console.log(sonuc);
+
+        sonuc = Math.sqrt(sayi1)
+
+        sonuc = Math.round(sonuc);
+        console.log(sonuc);
+
+        sonuc = Math.pow(sayi1, 2)
+        console.log(sonuc);
+
+        var rastgele = Math.random() * 100;
+        console.log(rastgele);    //rastgele sayı oluştur
+
+        console.log(Math.floor(rastgele));   //rastgele sayıyı tam yap
+
+        console.log(Math.max(sayi1, sayi2));
+        console.log(Math.min(sayi1, sayi2));
+
+        var metin1 = "Feyza";
+        var metin2 = "Cihan";
+        console.log("merhaba " + metin1);
+        console.log(metin1 + " ve " + metin2);
+        console.log(sayi1 + metin1);
+
+        console.log(metin1.length);
+        console.log(sayi1.length);
+
+        console.log(metin1.slice(0, 2));
+        console.log(metin1.slice(2));   //index ver hangi harf var onu bul
+        console.log(metin1.slice(-1));
+        console.log(metin1.slice(0));
+
+        console.log(metin1.indexOf("y"));  //2 tane e varsa ilk bulduğunu gösterir // harf ver hangi index onu bul
+        console.log(metin1.lastIndexOf("e"));
+
+        console.log(metin1.toUpperCase());
+        console.log(metin1.toLowerCase());
+
+        var metin3 = "ismek web web web kursu";
+        console.log(metin3.replace("web", "ingilizce"))
+        console.log(metin3);
+        metin3 = metin3.replace("web", "ingilizce");   //aynı kelimeden birkaç tane varsa sadece ilkini değiştirir
+        console.log(metin3);
+
+        var metin4 = "ismek webinar web web kursu";
+        metin4 = metin4.replace(/web/i, "ingilizce")   //web kelimesinden sonra i harfiyle devam edenler
+
+
+
+        document.write(metin1);
+        document.write(metin2);
+
+        document.writeln(metin1);
+        document.writeln(metin2);   //ötelemek, boşluk bırakmak
+
+        // alert(metin1)   //uyarı penceresi
+        // alert(metin2.concat(" ", metin1))
+
+        var kelimeler = metin3.split(" ");   //bir cümleyi dizi elemanı olarak ayırmak istersek
+        console.log(kelimeler);
+
+
+        // var sayi1 = Number(prompt("1.sayıyı giriniz"));   //buraya Nymber fonksiyonu yazarsam değişkeni burada number a dönüştürür
+        // var sayi2 = Number(prompt("2.sayıyı giriniz"));
+        console.log(sayi1 + sayi2);   //değişkeni string olarak saklamak isteyip, işlem yaparken number a çevirmek istersem burada number içine almalıyım(Number8sayi1)+Number(sayi2)
+
+        var sayi3 = 1256;
+        console.log(String(sayi3).length);    //uzunluk sadece stringlerde alınabildiği için number bir değişkenin uzunluğunu önce onu stringe dönüştürerek alırız.  string metodudur.. bu yeni olandır.bunu kullan
+        console.log(sayi3.toString);    //bu da başka bir yöntem. string sınıfından dönüştürür
+
+
+
+        //tarih saat
+        var tarih = Date();  //bugünün tarihi
+        console.log(tarih);
+
+        //doğum tarihimi saklamak istiyorum
+        var DTarihi = new Date("1992.05.16");
+        console.log(DTarihi);
+
+        var Dtarihi2 = new Date(1992, 5, 16, 12, 30);
+        console.log(Dtarihi2);    //bunu yaparsam haziran 16 yapar neden?? çünkü index numarasına göre yapar. sadece ay için index kullan. 
+
+        var tarih2 = new Date("1992.05.16 12:30");
+        console.log(tarih2);
+
+
+        console.log(DTarihi.getFullYear());
+
+
+        var kullaniciDTarihi = new Date(prompt("Doğum tarihinizi yazınız/yıl ay gün şeklinde")); //kullanıcıdan doğum tarihi aldım. değişkene attım
+        alert("yaşınız: " + (2024 - kullaniciDTarihi.getFullYear()));
+
+        //gün ay yıl ayrı ayrı alsam
+        // var gun = prompt("gün gir");
+        // var ay = prompt("ay gir");
+        // var yil = prompt("yil gir");
+        // var Dtarihi2 = new Date(yil, ay, gun);
+        // console.log(Dtarihi2);
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

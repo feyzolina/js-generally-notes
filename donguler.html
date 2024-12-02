@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //FOR DÖNGÜSÜ
+        //sınırlı sayıda, ne zaman biteceği belli olan döngüler yapıyorsak
+        //1den 10a kadar olan sayıları konsola yazdır
+        for (sayi = 1; sayi <= 10; sayi++) {    //değişken de tanımlayabilirsin var sayi=0; let sayi=0; diyebilirsin
+            console.log(sayi);
+        }
+
+        var isimler = ["feyza", "cihan", "herkül"]
+        for (var i = 0; i < 3; i++) {
+            console.log(isimler[i]);
+        }
+        for (var i = 0; i < isimler.length; i++) {
+            console.log(isimler[i]);
+        }
+
+        var ad = "feyza";    //stringler dizi mantığıyla çalışırlar. string ifadenin 0. 1. elemanı onun karakterleridir. stringler dizlerle aynı belleği kullanırlar
+        for (var i = 0; i < ad.length; i++) {
+            console.log(ad[i]);
+        }
+        //for in
+        var dizi1 = ["feyza", "cihan", "herkül"];
+        for (var x in dizi1) {
+            console.log(dizi1[x]);   // for in ile for of farkını öğren
+        }
+        //for of
+
+        for (var i of dizi1) {     //tüm diziyi döner son elemanı döndürür. uzunluk sayısı kadar döndürür. herkülü 3 defa yazdırdı
+            console.log(dizi1[x]);   // for in ile for of farkını öğren
+        }
+
+        //WHİLE DÖNGÜSÜ
+        //ne zaman biteceği belli olmayan sınırsız döngüler sonsuz döngüler
+        var y = 0;
+        while (y < dizi1.length) {
+            console.log(dizi1[y])
+            y++;
+        }
+
+        var y = 3;
+        while (y >= 0) {
+            console.log(dizi1[y])
+            y--;
+        }
+        //DO WHİLE DÖNGÜSÜ
+        //en az bir kere çalışır
+        // var x= 0;
+        // do{
+        //     console.log("döngü çalışmadı " + dizi1);
+        // }while(x < dizi1.length){
+        //     console.log(dizi1[x])
+        //     x++;
+           
+        // }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

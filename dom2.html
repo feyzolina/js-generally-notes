@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, distinctio.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, nam? Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Tempore debitis iusto mollitia recusandae in repudiandae earum magni iste, quam ipsum dolor
+        quaerat vitae dolores exercitationem esse ipsam laborum aspernatur. Earum!</p>
+    <a href="#" onclick="ekle()">devamı...<a>
+    <div></div>
+    <ul>
+        <li>elma</li>
+        <li>armut</li>
+    </ul>
+    <script>
+        document.querySelector("div").style.color = "red";  //query selector ilk nesneyi yakalar. querySelectorAll hepsini yakalar. mesela div dedik bütün divleri yakalar
+        var ilave = "metin";  //id den yakalamak için # sınıftan yakalamak için . ile yaz
+        document.querySelector("p").insertAdjacentText("beforebegin", ilave);  //innertext ile sadece ilave ediyorduk. insertAdjacenttext ile öncesine sonrasına nereye istiyorsak işaretleyebiliyoruz//paragraf tagının dış üstü
+        // document.querySelector("p").insertAdjacentText("afterbegin", ilave);  //paragraf tagının iç üstü.
+        // document.querySelector("p").insertAdjacentText("beforend", ilave);  //paragraf tagının iç sonunda
+        // document.querySelector("p").insertAdjacentText("beforend", ilave);   // paragraf tagının dış sonunda
+        document.querySelector("ul").children[0].remove();
+        document.querySelector("ul").insertAdjacentHTML("afterbegin", "<li> mandalina </li>");
+
+        var li = document.createElement("li");
+        li.innerText = "muz";
+        document.querySelector("ul").appendChild(li);
+
+        var paragraf = document.createElement("p");
+        var yazi = document.createTextNode("yağmurlu hava");
+        function ekle() {
+            paragraf.appendChild(yazi);
+            // document.querySelectorAll("div").item(1).appendChild(paragraf);
+            document.querySelectorAll("div")[1].insertAdjacentElement("afterbegin", paragraf);
+        }
+
+        document.querySelector("p").parentElement.style.border="4px solid red";
+
+
+
+
+
+    </script>
+</body>
+
+</html>

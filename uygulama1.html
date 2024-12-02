@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" name="ad" id="" pattern="[A-Za-z0-9]{1,6}" required> <!-- //pattern="[]" herşeyi kabul et ama [wv]--->
+        <!--süslü parantez karakter uzunluğudur burada -->
+        <!-- {0,} yaparsam sınırsız olur   {1,6} en az 1 en fazla 6 -->
+        <input type="submit" onclick="kontrol()">
+    </form>
+    <script>
+        var paragraf=document.createElement("p");
+        function kontrol(){
+            var deger=document.querySelector("input").value;
+            if(deger.length==0){
+                document.querySelector("div").appendChild(paragraf).innerText="boş geçme kardeşim";
+            }else if(deger.length>6){
+                document.querySelector("div").appendChild(paragraf).innerText ="en fazla 6 karakter gir lubunya";
+            }else{document.querySelector("input").style.border="3px solid green";}
+        }
+    </script>
+</body>
+
+</html>

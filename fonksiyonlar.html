@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        ///metot ve fonksiyon aynı şeydir
+        //objenin içinde oluşmuş fonksiyona metot denir
+        //parametresiz geriye değer döndürmeyen fonksiyon
+        // function merhaba() {
+        //     alert("merhaba");
+        // }
+        // merhaba();
+
+        //parametreli geriye değer döndürmeyen fonksiyon
+        // function merhaba2(x) {
+        //     console.log("merhaba " + x);
+        // }
+        // merhaba2(prompt("adınız : "));
+
+        //parametresiz geriye değer döndüren fonksiyon
+        // function merhaba3 (){
+        //     return "merhaba";
+        // }
+        // var sonuc= merhaba3();    // ya da console.log(merhaba3());
+        // console.log(sonuc);
+
+
+        //parametreli geriye değer döndüren fonksiyon
+        // function merhaba4(y){
+        //     return "merhaba " + y;
+        // }
+        // var sonuc=merhaba4(prompt("adınız"));    //ya da console.log(merhaba4("feyza"));
+        // console.log(sonuc);
+
+
+        //soru: kullanıcıdan 2 sayı al. toplama işlemi yaptır. ekrana yazdır
+        // function toplama(x,y){
+        //     console.log(Number(x)+Number(y));   //x ten ve y den gelen sayıyı number a çevir. çünkü prompt ile alınırsa string  olur ve toplama yapılamaz
+        // }
+        // toplama(50,40);
+
+        // // var sayi1=90;
+        // // var sayi2=110;
+        // // toplama(sayi1,sayi2);
+
+
+        // var sayi3=prompt("sayı gir");    //fonksiyonda number a çevirmeyi unutma yoksa string toplar
+        // var sayi4=prompt("say gir");
+        // toplama(sayi3,sayi4);
+
+
+        //soru: kullanıcıdan alınan 2 sayıyı hangi işlemi yapacağını sor
+        //fonksiyon1:
+        // function dortIslem(x,y,hesaplama){
+        //     if(hesaplama== "+"){
+        //         console.log(x + y);
+        //     }else if(hesaplama== "-"){
+        //          console.log(x - y);
+        //     } else if (hesaplama == "*") {
+        //         console.log(x * y);
+        //     }
+        //     else if (hesaplama == "/") {
+        //         console.log(x / y);
+        //     }else{
+        //         alert("hatalı giriş yaptınız");
+        //     }
+        // }
+        // var sayi1 = Number(prompt("1.sayıyı giriniz: "));
+        // var sayi2 = Number(prompt("2.sayıyı giriniz: "));
+        // var islem = prompt("ne yapalım: toplama için + çıkarma için - çarpma için * bölme için /");
+        // dortIslem(sayi1, sayi2, islem);
+
+        //fonksiyon2:
+        // function dortIslem(x, y, hesaplama) {
+        //     var sonuc;
+        //     if (hesaplama == "+") {
+        //         sonuc = x + y;
+        //     } else if (hesaplama == "-") {
+        //         sonuc = x - y;
+        //     }
+        //     else if (hesaplama == "*") {
+        //         sonuc = x * y;
+        //     } else if (hesaplama == "/") {
+        //         sonuc = x / y;
+        //     } else {
+        //         alert("hatalı giriş yaptınız");
+        //     }
+        //     console.log(sonuc);
+        // }
+        // var sayi1 = Number(prompt("1.sayıyı giriniz: "));
+        // var sayi2 = Number(prompt("2.sayıyı giriniz: "));
+        // var islem = prompt("ne yapalım: toplama için + çıkarma için - çarpma için * bölme için /");
+        // dortIslem(sayi1, sayi2, islem);
+
+        //  ödev:fonksiyon yap, kullanıcıdan doğum tarihini alan ve yaşını hesapladıktan sonra eğer yaşı 55ten büyükse emeklilik zamanı gelmiş yazısını,
+        // değilse çalışmaya devam yazsısını alerte çıkaran fonksiyon
+
+        // var kullaniciDTarihi = new Date(prompt("Doğum tarihinizi yazınız/yıl ay gün şeklinde"));
+        // var yas = (2024 - kullaniciDTarihi.getFullYear());   
+        // if (yas >= 55) {
+        //     alert("emekliliğin gelmiş aşkoo");
+        // } else {
+        //     alert("çalışmaya devamkee");
+        // }   //2024 yerine nasıl new date yapabilirsin ona bak!!!!!!!!!!!!!!!!!
+
+
+        //metot overloding
+        function topla(x, y, z) {
+            return x + y + z;
+        }
+        function topla(x, y) {
+            console.log(x + y);
+        }
+        function topla() {
+            var x = Number(prompt("sayı giriniz : "));
+            var y = Number(prompt("sayı giriniz : "));
+            console.log(x + y);
+        }
+
+        topla();
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
