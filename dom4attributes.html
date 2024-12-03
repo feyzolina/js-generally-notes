@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    p {
+        color: red;
+        font-size: 50px;
+    }
+
+    .hareket {
+        transition-duration: 2s;
+        transition-property: all;
+    }
+
+    img {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+    #container {
+        position: relative;
+        margin-bottom: 400px;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <img src="./herkül.jpg" alt="" width="200" height="200">
+    </div>
+    <button onclick="buyume()">resim</button>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <button onclick="degistir()">tıklavegör</button>
+    <script>
+        // document.querySelector("#container img").getAttribute("width");      //get attribute tek anlamı var: değeri almak
+        // document.querySelector("#container img").setAttribute("width", "500");  //değeri alır ve değiştirir
+        // document.querySelector("#container img").setAttribute("src", "yavruherkül.jpg");
+        // document.querySelector("#container img").removeAttribute("width");          //silmek için.
+        function degistir() {
+            document.querySelector("p").className = "hareket";     //className sorgulamayı öğren.
+            document.querySelector("p").style.color = "blue";
+        }
+        // var x=20;
+        document.querySelector("img").addEventListener("click", function () {
+            document.querySelector("img").className = "hareket";
+            document.querySelector("img").style.left = "400px";     //style.left=(x+=x)+"px";
+        })
+        function buyume() {
+            document.querySelector("img").className = "hareket";
+            document.querySelector("p").style.width = "200%";
+            document.querySelector("p").style.height = "200%";
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

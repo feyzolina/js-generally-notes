@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div></div>
     <button>tıklavegör</button>
-    <ul style="display:none;"><li>anasayfa</li><li>hakkımızda</li></ul>
+    <ul style="display:none;">
+        <li>anasayfa</li>
+        <li>hakkımızda</li>
+    </ul>
     <script>
         // document.querySelector("button").addEventListener("click",function(){document.querySelector("div").innerText="sürprizzzzz";})
-        document.querySelector("button").addEventListener("click",function(){
-            if(document.querySelector("ul").style.display=="none"){
-                document.querySelector("ul").style.display ="block";
-            }else{
-                document.querySelector("ul").style.display ="none";
+        document.querySelector("button").addEventListener("click", function () {
+            if (document.querySelector("ul").style.display == "none") {
+                document.querySelector("ul").style.display = "block";
+            } else {
+                document.querySelector("ul").style.display = "none";
             }
         })
     </script>
 </body>
+
 </html>
