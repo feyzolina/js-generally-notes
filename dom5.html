@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>Lorem, ipsum dolor.</p>
+        <a href="#">tıkla</a>
+        <p>Lorem, ipsum dolor.</p>
+    </div>
+    <button onclick="baslat()">başlat</button>
+    <button onclick="bitir()">bitir</button>
+    <script>
+        document.querySelector("a").nextElementSibling;
+        function merhaba() {
+            alert("merhaba");
+        }
+        // setTimeout(merhaba,5000);   //ms değerinden girmek zorundaız.2000ms için sadece 2000 yaz
+        // setInterval(merhaba, 5000);    //çalışmaya 5 saniye sonra başlayacak ve 5 saniye aralıklarla çalışmaya devam edecek
+
+
+        //konsola geçen saniyeyi yaz:
+        // var sure = 0;
+        // function gecensure() {
+        //     console.log("geçen süre: " + (sure++));
+        // }
+        // setInterval(gecensure, 1000);
+
+
+
+        //aynı işi bir de anonim fonksiyonla yazalım
+        // var sure = 0;
+        // setInterval(function(){},1000);   //böyle de yapabilirsin
+        // setInterval(()=> { console.log(sure++) }, 1000);    //böyle de.
+
+
+        var zamanlama;
+        var sure = 0;
+        function baslat(){
+          zamanlama=setInterval(function(){
+                console.log(sure++)
+            },1000);
+        }
+        function bitir(){
+             clearInterval(zamanlama);
+        }
+       
+
+
+
+    </script>
+</body>
+
+</html>

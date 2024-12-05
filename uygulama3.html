@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slider">
+        <div id="sahne">
+            <img src="şaşkınherkül.jpg" alt="">
+            <p>sınavlara hazırlık kursu</p>
+        </div>
+        <button onclick="slaytgeri()">geri</button>
+        <button onclick="slaytileri()">ileri</button>
+    </div>
+    <script>
+        const veriler = [{ resim: "herkül.jpg", paragraf: "sınavlara hazırlık kursu" },
+        { resim: "yavruherkül.jpg", paragraf: "herkülün annesine zararları" },
+        { resim: "şaşkınherkül.jpg", paragraf: "şaşırmacalar şakalar komiklikler" }];
+
+        var indis = 0;
+        function slaytileri() {
+            // if(indis>=0){
+            //     document.querySelector("#sahne img").setAttribute("src",veriler[indis].resim);
+            //     document.querySelector("#sahne p").innerText=veriler[indis].paragraf;
+            //     indis++;
+            // }
+            // else if(indis>veriler.length-1){
+            //     indis=0;
+            //     document.querySelector("#sahne img").setAttribute("src", veriler[indis].resim);
+            //     document.querySelector("#sahne p").innerText = veriler[indis].paragraf;
+
+            // }
+
+
+            if (indis > veriler.length - 1) {
+                indis = 0;
+
+            }
+            document.querySelector("#sahne img").setAttribute("src", veriler[indis].resim);
+            document.querySelector("#sahne p").innerText = veriler[indis].paragraf;
+            indis++;
+        }
+
+        function slaytgeri(){
+                
+                 if (indis < 0) {
+                indis = 0;
+
+            }
+            indis--;
+            document.querySelector("#sahne img").setAttribute("src", veriler[indis].resim);
+            document.querySelector("#sahne p").innerText = veriler[indis].paragraf;
+            
+        }
+        
+    </script>
+</body>
+
+</html>
